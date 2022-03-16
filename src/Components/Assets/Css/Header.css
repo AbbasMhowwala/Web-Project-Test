@@ -1,0 +1,92 @@
+ol,
+ul {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+ol,
+ul li {
+  list-style-type: none;
+}
+li.logo-menu {
+  margin-right: auto;
+}
+li.menu.links-menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.bw-footer {
+  background: #151414;
+  color: #fff;
+  padding: 50px 0 0;
+  border-top: 1px solid #ccc;
+}
+.bw-footer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  line-height: 40px;
+}
+.copytight p {
+  margin-bottom: 0;
+}
+.copytight a {
+    padding: 0;
+}
+.copytight {
+    background: #282727;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+}
+button.login-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: none !important;
+}
+button.login-btn:hover,
+button.login-btn:active,
+button.login-btn:focus {
+  background: transparent;
+  color: #000;
+  box-shadow: none !important;
+}
+.login-title {
+  padding: 0 0 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.login-modal .modal-header {
+  border: none;
+}
+.login-modal .modal-body {
+  padding: 20px 20px 0;
+}
+.body-login {
+  padding: 0 40px 40px;
+}
+a.forgot-password {
+  float: right;
+  padding: 0 0 7px;
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+}
+p.register.mt-5.text-center {
+  font-size: 14px;
+  margin: 0;
+}
+p.register.mt-5.text-center a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 4px;
+}
