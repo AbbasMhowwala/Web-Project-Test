@@ -14,7 +14,7 @@ const Collection = () => {
           <Col xl={12} lg={12} md={12} sm={12} className="mb-5">
             <h1 className="main-heading text-center">Explore Our Collection</h1>
           </Col>
-          <Col xl={3} lg={3} md={3} sm={6}>
+          <Col xl={3} lg={3} md={6} sm={6}>
             <div className="explore-cat">
               <div className="img-box">
                 <Image src={rings} alt="Rings"></Image>
@@ -25,7 +25,7 @@ const Collection = () => {
               </div>
             </div>
           </Col>
-          <Col xl={3} lg={3} md={3} sm={6}>
+          <Col xl={3} lg={3} md={6} sm={6}>
             <div className="explore-cat">
               <div className="img-box">
                 <Image src={bracelet} alt="Bracelet"></Image>
@@ -36,7 +36,7 @@ const Collection = () => {
               </div>
             </div>
           </Col>
-          <Col xl={3} lg={3} md={3} sm={6}>
+          <Col xl={3} lg={3} md={6} sm={6}>
             <div className="explore-cat">
               <div className="img-box">
                 <Image src={necklace} alt="Necklace"></Image>
@@ -47,7 +47,7 @@ const Collection = () => {
               </div>
             </div>
           </Col>
-          <Col xl={3} lg={3} md={3} sm={6}>
+          <Col xl={3} lg={3} md={6} sm={6}>
             <div className="explore-cat">
               <div className="img-box">
                 <Image src={earring} alt="Earring"></Image>

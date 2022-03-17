@@ -10,6 +10,7 @@ import Footer from "./Components/Templates/Footer";
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import './/Components/Assets/Css/Theme.css';
+import './/Components/Assets/Css/Responsive.css';
 import Register from "./Components/Templates/Register";
 function App() {
   const [loading, setLoading] = useState(true);

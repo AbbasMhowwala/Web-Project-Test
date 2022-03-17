@@ -1,0 +1,20 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .awssld.awssld--organic-arrows.slider-bw {
+    height: 170px;
+  }
+
+  .bw-collection h1.main-heading {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .awssld.awssld--organic-arrows.slider-bw {
+    height: 300px;
+  }
+  .logo.logo1 {
+    margin-right: auto;
+  }
+  .custom-container {
+    max-width: inherit !important;
+  }
+}

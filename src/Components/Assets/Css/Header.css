@@ -90,3 +90,8 @@ p.register.mt-5.text-center a {
   font-weight: 600;
   padding: 0 4px;
 }
+
+li.menu.links-menu a:hover 
+{
+  color: #000 !important;
+}

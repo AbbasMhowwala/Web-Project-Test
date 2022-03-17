@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="bw-footer">
       <Container>
         <Row>
-          <Col xl={3} lg={3} md={3} sm={6} xs={12}>
+          <Col xl={3} lg={3} md={6} sm={6} xs={12}>
             <div className="bw-footer-info">
               <Image
                 className="img-fluid mb-3"
@@ -23,7 +23,7 @@ const Footer = () => {
               </p>
             </div>
           </Col>
-          <Col xl={2} lg={2} md={2} sm={4} xs={12}>
+          <Col xl={2} lg={2} md={3} sm={4} xs={12}>
             <div className="bw-list">
               <h3>Infomation</h3>
               <ul>
@@ -42,7 +42,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col xl={2} lg={2} md={2} sm={4} xs={12}>
+          <Col xl={2} lg={2} md={3} sm={4} xs={12}>
             <div className="bw-list">
               <h3>Infomation</h3>
               <ul>
@@ -61,7 +61,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col xl={2} lg={2} md={2} sm={4} xs={12}>
+          <Col xl={2} lg={2} md={3} sm={4} xs={12}>
             <div className="bw-list">
               <h3>Infomation</h3>
               <ul>
@@ -80,7 +80,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col xl={2} lg={2} md={2} sm={4} xs={12}>
+          <Col xl={2} lg={2} md={3} sm={4} xs={12}>
             <div className="bw-list">
               <h3>Infomation</h3>
               <ul>

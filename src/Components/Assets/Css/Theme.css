@@ -29,3 +29,12 @@
 .alert-heading.h4 {
     font-size: 16px;
 }
+nav.mobile-menu.navbar.navbar-expand.navbar-light button.btn.btn-primary {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  
