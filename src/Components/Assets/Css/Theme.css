@@ -37,4 +37,6 @@ nav.mobile-menu.navbar.navbar-expand.navbar-light button.btn.btn-primary {
     text-transform: capitalize;
     font-weight: 600;
   }
-  
+  .login-modal.modal a.forgot-password:hover {
+    color: #000 !important;
+}

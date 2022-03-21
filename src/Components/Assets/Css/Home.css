@@ -71,3 +71,28 @@ a:hover
 {
     color: #fff !important;
 }
+h1.slider-title {
+    text-transform: capitalize;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.carousel-item p {
+    font-size: 18px;
+}
+.carousel-caption {
+    left: 200px !important;
+    text-align: left !important;
+    color: #000 !important;
+    bottom: unset !important;
+    top: 250px !important;
+    right: unset !important;
+}
+.slider-btn {
+    background: #000 !important;
+    padding: 10px 30px;
+    border-radius: 30px !important;
+}
+.slider-btn a{
+    color: #fff !important; 
+    text-decoration: none !important;
+}
