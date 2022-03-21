@@ -32,7 +32,7 @@ const Collection = () => {
               </div>
               <div className="explore-content text-center m-3">
                   <h3 className="cat-heading mb-3">Bracelets</h3>
-                  <Button variant="contained" color="primary" className="explore-btn d-block w-100"><Link to="/">Shop Bracelet</Link></Button>
+                  <Button variant="contained" color="primary" className="explore-btn d-block w-100"><Link to="/">Shop Bracelets</Link></Button>
               </div>
             </div>
           </Col>
@@ -43,7 +43,7 @@ const Collection = () => {
               </div>
               <div className="explore-content text-center m-3">
                   <h3 className="cat-heading mb-3">Necklaces</h3>
-                  <Button variant="contained" color="primary" className="explore-btn d-block w-100"><Link to="/">Shop Necklace</Link></Button>
+                  <Button variant="contained" color="primary" className="explore-btn d-block w-100"><Link to="/">Shop Necklaces</Link></Button>
               </div>
             </div>
           </Col>
