@@ -63,6 +63,9 @@ const Menu = () => {
                 <Link to="/gallery">Gallery</Link>
               </li>
               <li className="menu links-menu">
+                  <Link to="/shop">Shop</Link>
+                </li>
+              <li className="menu links-menu">
                 <Link to="/contact">Contact us</Link>
               </li>
               <li className="menu links-menu">
@@ -101,6 +104,9 @@ const Menu = () => {
                 </li>
                 <li className="menu links-menu">
                   <Link to="/gallery">Gallery</Link>
+                </li>
+                <li className="menu links-menu">
+                  <Link to="/shop">Shop</Link>
                 </li>
                 <li className="menu links-menu">
                   <Link to="/contact">Contact us</Link>

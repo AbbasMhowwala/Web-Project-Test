@@ -96,3 +96,6 @@ h1.slider-title {
     color: #fff !important; 
     text-decoration: none !important;
 }
+p.register.mt-5.text-center a:hover {
+    color: #000 !important;
+}

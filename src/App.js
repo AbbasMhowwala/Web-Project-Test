@@ -12,6 +12,7 @@ import { Spinner } from "react-bootstrap";
 import './/Components/Assets/Css/Theme.css';
 import './/Components/Assets/Css/Responsive.css';
 import Register from "./Components/Templates/Register";
+import Shop from "./Components/Shop";
 function App() {
   const [loading, setLoading] = useState(true);
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
         </Routes>
