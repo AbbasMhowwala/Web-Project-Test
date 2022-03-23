@@ -149,7 +149,7 @@ const Menu = () => {
           </Row>
           <Row>
             <Col>
-            <p className="register mt-5 text-center">Don't have an account? <Link to="/register" className="text-black"> Sign Up </Link></p>
+            <p className="register mt-5 text-center">Don't have an account? <Link to="/register" className="text-black" onClick={()=>{ setModalShow(false)}}> Sign Up </Link></p>
             </Col>
           </Row>
           </div>

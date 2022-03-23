@@ -19,7 +19,7 @@ const Slider = () => {
               <div data-src={slide2} />
               <div data-src={slide3} />
             </AwesomeSlider> */}
-            <Carousel fade className="p-0">
+            <Carousel fade className="p-0" interval={1000} slide={true} touch={true} keyboard={true}>
               <Carousel.Item>
                 <Image
                   className="d-block w-100"
