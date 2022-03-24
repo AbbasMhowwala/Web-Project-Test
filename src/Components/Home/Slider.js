@@ -1,7 +1,5 @@
 import React from "react";
 import { Container, Image, Row } from "react-bootstrap";
-// import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
 import slide1 from "../Assets/Images/slide1.jpg";
 import slide2 from "../Assets/Images/slide2.jpg";
 import slide3 from "../Assets/Images/slide3.jpg";
@@ -14,11 +12,6 @@ const Slider = () => {
       <div className="hero-img">
         <Container fluid className="p-0">
           <Row className="m-auto w-100">
-            {/* <AwesomeSlider bullets={false} className="slider-bw p-0">
-              <div data-src={slide1} />
-              <div data-src={slide2} />
-              <div data-src={slide3} />
-            </AwesomeSlider> */}
             <Carousel fade className="p-0" interval={1500} slide={true} touch={true} keyboard={true}>
               <Carousel.Item>
                 <Image

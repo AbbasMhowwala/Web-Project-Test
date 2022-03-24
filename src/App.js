@@ -13,6 +13,7 @@ import './/Components/Assets/Css/Theme.css';
 import './/Components/Assets/Css/Responsive.css';
 import Register from "./Components/Templates/Register";
 import Shop from "./Components/Shop";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   const [loading, setLoading] = useState(true);
   return (
@@ -23,6 +24,7 @@ function App() {
       </div>
       <BrowserRouter>
         <Menu />
+        <ScrollToTop>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -32,6 +34,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
         <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );

@@ -8,7 +8,7 @@ const Copyrigt = () => {
       <Container>
         <Row className="copyright-bottom mt-5">
           <Col lg={11} sm={12}>
-            <div class="copytight">
+            <div className="copytight">
               <p>
                 Belgium Webnet © 2022 All rights reserved. Designed and
                 Developed by: <Link to="/">Belgium WebNet</Link>

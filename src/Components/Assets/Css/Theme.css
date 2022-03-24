@@ -47,5 +47,36 @@ nav.mobile-menu.navbar.navbar-expand.navbar-light button.btn.btn-primary {
 }
 .height
 {
-  height: 70vh;
+  height: 100vh;
+}
+.bw-prod-list-banner img {
+  width: 100%;
+}
+.product-title {
+  font-size: 20px !important;
+  line-height: 30px !important;
+  font-weight: 600 !important;
+  font-family: revert !important;
+}
+.product-price {
+  font-size: 25px !important;
+  font-family: revert !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+  display: block !important;
+}
+.product-img {
+  width: 250px !important;
+  margin: 0 auto;
+  margin-bottom: 20px !important;
+}
+.stick-fliter {
+  position: sticky;
+  top: 0;
+  justify-content: center;
+}
+img.quick-img {
+  width: 310px;
+  margin: 0 auto;
+  display: block;
 }
