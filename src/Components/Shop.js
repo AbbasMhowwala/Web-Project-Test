@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Accordion, Col, Container, Image, Modal, Row } from "react-bootstrap";
+import {
+  Accordion,
+  Col,
+  Container,
+  Image,
+  Modal,
+  Row,
+  Card,
+} from "react-bootstrap";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+// import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -15,6 +23,8 @@ import WindowIcon from "@mui/icons-material/Window";
 import FormatListNumberedRtlIcon from "@mui/icons-material/FormatListNumberedRtl";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import { Button } from "@mui/material";
+
 const Shop = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -116,7 +126,7 @@ const Shop = () => {
             </div>
           </Col>
           <Col md={9}>
-            <Row>
+            <Row className="border p-3">
               <Col md={12} className="text-center">
                 <div className="d-inline-block">
                   <span className="mx-3">View</span>
@@ -133,221 +143,77 @@ const Shop = () => {
             <div id="product-views">
               {grid ? (
                 <div id="grid-view">
-                  <Grid
-                    container
-                    rowSpacing={1}
-                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                    className="mt-3 grid-view"
-                  >
-                    <Grid item xs={4} onClick={handleShow}>
-                      <Card>
-                        <CardActionArea>
-                          <Slider {...settings}>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                          </Slider>
-
-                          <CardContent className="border-top">
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="p"
-                              className="product-title"
-                            >
-                              14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              component="small"
-                              className="product-price"
-                              color="text.black"
-                            >
-                              $ 493
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
+                  <Row>
+                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
+                      <Card  onClick={handleShow}>
+                        <Slider {...settings} className="border-bottom">
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                        </Slider>
+                        <Card.Body>
+                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                              Engagement Ring</Card.Title>
+                          <Button variant="contained" className="my-3">Shop Now</Button>
+                        </Card.Body>
                       </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-                      <Card>
-                        <CardActionArea>
-                          <Slider {...settings}>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                          </Slider>
-
-                          <CardContent className="border-top">
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="p"
-                              className="product-title"
-                            >
-                              14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              component="small"
-                              className="product-price"
-                              color="text.black"
-                            >
-                              $ 493
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
+                    </Col>
+                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
+                      <Card  onClick={handleShow}>
+                        <Slider {...settings} className="border-bottom">
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                        </Slider>
+                        <Card.Body>
+                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                              Engagement Ring</Card.Title>
+                          <Button variant="contained" className="my-3">Shop Now</Button>
+                        </Card.Body>
                       </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-                      <Card>
-                        <CardActionArea>
-                          <Slider {...settings}>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                          </Slider>
-
-                          <CardContent className="border-top">
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="p"
-                              className="product-title"
-                            >
-                              14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              component="small"
-                              className="product-price"
-                              color="text.black"
-                            >
-                              $ 493
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
+                    </Col>
+                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
+                      <Card  onClick={handleShow}>
+                        <Slider {...settings} className="border-bottom">
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                        </Slider>
+                        <Card.Body>
+                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                              Engagement Ring</Card.Title>
+                          <Button variant="contained" className="my-3">Shop Now</Button>
+                        </Card.Body>
                       </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-                      <Card>
-                        <CardActionArea>
-                          <Slider {...settings}>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                            <div>
-                              <CardMedia
-                                component="img"
-                                image={productimg}
-                                alt="Product Image"
-                                className="product-img"
-                              />
-                            </div>
-                          </Slider>
-
-                          <CardContent className="border-top">
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="p"
-                              className="product-title"
-                            >
-                              14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring
-                            </Typography>
-                            <Typography
-                              variant="body2"
-                              component="small"
-                              className="product-price"
-                              color="text.black"
-                            >
-                              $ 493
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </Grid>
-                  </Grid>
+                    </Col>
+                  </Row>
                 </div>
               ) : (
                 <div id="list-view">
@@ -553,14 +419,23 @@ const Shop = () => {
           </Col>
         </Row>
       </Container>
-      <Modal show={show} onHide={handleClose} centered dialogClassName="modal-90w">
+      <Modal
+        show={show}
+        onHide={handleClose}
+        centered
+        dialogClassName="quick-modal"
+      >
         <Modal.Header closeButton>
           <Modal.Title className="invisible">Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Row>
+          <Row className="align-items-center">
             <Col md={6}>
-              <Image src={productimg} alt="Product Quick View Images" className="quick-img"></Image>
+              <Image
+                src={productimg}
+                alt="Product Quick View Images"
+                className="quick-img"
+              ></Image>
             </Col>
             <Col md={6}>
               <div className="quickview-content">
@@ -581,6 +456,9 @@ const Shop = () => {
                 >
                   $ 493
                 </Typography>
+                <Button variant="contained" color="primary" className="my-3 mx-1">Add To Wishlist</Button>
+                <Button variant="contained" color="info" className="my-3">Add To Cart</Button>
+
               </div>
             </Col>
           </Row>
