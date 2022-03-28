@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "./Components/Templates/Menu";
 import Home from "./Components/Home";
@@ -14,6 +13,7 @@ import './/Components/Assets/Css/Responsive.css';
 import Register from "./Components/Templates/Register";
 import Shop from "./Components/Shop";
 import ScrollToTop from "./Components/ScrollToTop";
+import ProductDetail from "./Components/ProductDetail";
 function App() {
   const [loading, setLoading] = useState(true);
   return (
@@ -32,6 +32,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/product-detail" element={<ProductDetail />} />         
         </Routes>
         <Footer />
         </ScrollToTop>

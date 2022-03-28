@@ -6,6 +6,7 @@ import slide3 from "../Assets/Images/slide3.jpg";
 import Carousel from 'react-bootstrap/Carousel'
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { animations } from 'react-animation'
 const Slider = () => {
   return (
     <div className="hero-slider">
@@ -19,7 +20,7 @@ const Slider = () => {
                   src={slide1}
                   alt="First slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption style={{animation: animations.bounceIn}}>
                   <h1 className="slider-title">Engagement Rings</h1>
                   <p>
                   Discover our unique Engagement Rings collection
@@ -33,7 +34,7 @@ const Slider = () => {
                   src={slide2}
                   alt="Second slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption style={{animation: animations.bounceIn}}>
                   <h1 className="slider-title">Perfect Symbol of Love</h1>
                   <p>
                   Explore the latest Wedding collection
@@ -48,7 +49,7 @@ const Slider = () => {
                   src={slide3 }
                   alt="Third slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption style={{animation: animations.bounceIn}}>
                   <h1 className="slider-title">Fine Jewelry</h1>
                   <p>
                   Explore the latest Fine Jewelry

@@ -6,13 +6,16 @@ import necklace from "../Assets/Images/necklace.png";
 import earring from "../Assets/Images/earring.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { animations } from 'react-animation'
+
+import 'react-animation/dist/keyframes.css'
 const Collection = () => {
   return (
     <div className="bw-collection">
       <Container className="custom-container">
         <Row>
           <Col xl={12} lg={12} md={12} sm={12} className="mb-5">
-            <h1 className="main-heading text-center">Explore Our Collection</h1>
+          <h1 className="main-heading text-center" style={{animation: animations.popIn}}>Explore Our Collection</h1>
           </Col>
           <Col xl={3} lg={3} md={6} sm={6}>
             <div className="explore-cat">

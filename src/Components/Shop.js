@@ -8,12 +8,8 @@ import {
   Row,
   Card,
 } from "react-bootstrap";
-import Grid from "@mui/material/Grid";
-// import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 import productimg from "../Components/Assets/Images/product/product.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,9 +20,12 @@ import FormatListNumberedRtlIcon from "@mui/icons-material/FormatListNumberedRtl
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { Button } from "@mui/material";
+import { animations } from "react-animation";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [show, setShow] = useState(false);
+  const [filter, setFilter] = useState(0);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [grid, setGrid] = useState(1);
@@ -36,6 +35,19 @@ const Shop = () => {
   const handleListView = () => {
     setGrid(0);
   };
+  const handleFilterView = (e) => {
+    if (e == 0) {
+      setFilter(1);
+      document.getElementById("product-full").classList.remove("col-md-12");
+      document.getElementById("product-full").classList.add("col-md-9");
+      document.getElementById("filter-toggle").classList.add("col-md-3");
+    } else {
+      setFilter(0);
+      document.getElementById("product-full").classList.remove("col-md-9");
+      document.getElementById("product-full").classList.add("col-md-12");
+      document.getElementById("filter-toggle").classList.remove("col-md-3");
+    }
+  };
   var settings = {
     dots: false,
     infinite: true,
@@ -44,8 +56,9 @@ const Shop = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     accessibility: true,
-    prevArrow: <ArrowCircleLeftIcon />,
-    nextArrow: <ArrowCircleRightIcon />,
+    // prevArrow: <ArrowCircleLeftIcon />,
+    asNavFor: '.slider-nav' 
+    // nextArrow: <ArrowCircleRightIcon />,
   };
   return (
     <div className="bw-shop">
@@ -65,7 +78,7 @@ const Shop = () => {
       </div>
       <Container>
         <Row>
-          <Col lg={8} className="m-auto text-center p-5">
+          <Col lg={12} className="m-auto text-start p-5">
             <h1>ENGAGEMENT RINGS</h1>
             <p>
               Engagement rings are the ultimate expression of love, which is why
@@ -76,11 +89,22 @@ const Shop = () => {
               complete your engagement setting. Then, sit back and admire your
               beautiful creation!
             </p>
+            <Button variant="contained" className="d-inline-block" onClick={() => handleFilterView(filter)}>Filter</Button>
           </Col>
         </Row>
         <Row className="m-3">
-          <Col md={3} className="mt-3">
-            <h1 className="mb-3">Filter</h1>
+          <div className="mt-3" id="filter-toggle" style={{animation: animations.popIn}}>
+            <div className="d-inline-block border w-100 p-3">
+              <span className="mx-3">View</span>
+              <span onClick={handleGridView}>
+                <WindowIcon />
+              </span>
+              <span className="mx-3">|</span>
+              <span onClick={handleListView}>
+                <FormatListNumberedRtlIcon />
+              </span>
+            </div>
+            <h1 className="mt-5 mb-3">Filter</h1>
             <div className="stick-fliter">
               <Accordion>
                 <Accordion.Item eventKey="0">
@@ -124,28 +148,21 @@ const Shop = () => {
                 </Accordion.Item>
               </Accordion>
             </div>
-          </Col>
-          <Col md={9}>
-            <Row className="border p-3">
-              <Col md={12} className="text-center">
-                <div className="d-inline-block">
-                  <span className="mx-3">View</span>
-                  <span onClick={handleGridView}>
-                    <WindowIcon />
-                  </span>
-                  <span className="mx-3">|</span>
-                  <span onClick={handleListView}>
-                    <FormatListNumberedRtlIcon />
-                  </span>
-                </div>
-              </Col>
-            </Row>
+          </div>
+          <Col md={12} id="product-full" style={{animation: animations.fadeIn}} className="trans_product">
             <div id="product-views">
               {grid ? (
                 <div id="grid-view">
                   <Row>
-                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
-                      <Card  onClick={handleShow}>
+                    <Col
+                      md={6}
+                      lg={4}
+                      sm={12}
+                      className="mt-3 grid-view"
+                      style={{ animation: animations.fadeIn }}
+                    >
+                    <Link to="/product-detail">
+                      <Card>
                         <Slider {...settings} className="border-bottom">
                           <Card.Img
                             variant="top"
@@ -161,14 +178,72 @@ const Shop = () => {
                           />
                         </Slider>
                         <Card.Body>
-                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring</Card.Title>
-                          <Button variant="contained" className="my-3">Shop Now</Button>
+                          <Card.Title>
+                            14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                            Engagement Ring
+                          </Card.Title>
+                          <Button variant="contained" className="my-3 me-3">
+                            Shop Now
+                          </Button>
+                          <Button
+                            variant="contained"
+                            className="my-3"
+                            onClick={handleShow}
+                          >
+                            View
+                          </Button>
+                        </Card.Body>
+                      </Card>
+                      </Link>
+                    </Col>
+                    <Col
+                      md={6}
+                      lg={4}
+                      sm={12}
+                      className="mt-3 grid-view"
+                      style={{ animation: animations.fadeIn }}
+                    >
+                      <Card>
+                        <Slider {...settings} className="border-bottom">
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                          <Card.Img
+                            variant="top"
+                            src={productimg}
+                            alt="Product Image"
+                            className="product-img"
+                          />
+                        </Slider>
+                        <Card.Body>
+                          <Card.Title>
+                            14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                            Engagement Ring
+                          </Card.Title>
+                          <Button variant="contained" className="my-3 me-3">
+                            Shop Now
+                          </Button>
+                          <Button
+                            variant="contained"
+                            className="my-3"
+                            onClick={handleShow}
+                          >
+                            View
+                          </Button>
                         </Card.Body>
                       </Card>
                     </Col>
-                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
-                      <Card  onClick={handleShow}>
+                    <Col
+                      md={6}
+                      lg={4}
+                      sm={12}
+                      className="mt-3 grid-view"
+                      style={{ animation: animations.fadeIn }}
+                    >
+                      <Card>
                         <Slider {...settings} className="border-bottom">
                           <Card.Img
                             variant="top"
@@ -184,32 +259,20 @@ const Shop = () => {
                           />
                         </Slider>
                         <Card.Body>
-                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring</Card.Title>
-                          <Button variant="contained" className="my-3">Shop Now</Button>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col md={6} lg={4} sm={12} className="mt-3 grid-view">
-                      <Card  onClick={handleShow}>
-                        <Slider {...settings} className="border-bottom">
-                          <Card.Img
-                            variant="top"
-                            src={productimg}
-                            alt="Product Image"
-                            className="product-img"
-                          />
-                          <Card.Img
-                            variant="top"
-                            src={productimg}
-                            alt="Product Image"
-                            className="product-img"
-                          />
-                        </Slider>
-                        <Card.Body>
-                          <Card.Title>14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
-                              Engagement Ring</Card.Title>
-                          <Button variant="contained" className="my-3">Shop Now</Button>
+                          <Card.Title>
+                            14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set
+                            Engagement Ring
+                          </Card.Title>
+                          <Button variant="contained" className="my-3 me-3">
+                            Shop Now
+                          </Button>
+                          <Button
+                            variant="contained"
+                            className="my-3"
+                            onClick={handleShow}
+                          >
+                            View
+                          </Button>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -217,7 +280,10 @@ const Shop = () => {
                 </div>
               ) : (
                 <div id="list-view">
-                  <Row className="m-3 d-flex align-items-center border-top">
+                  <Row
+                    className="m-3 d-flex align-items-center border-top"
+                    style={{ animation: animations.fadeIn }}
+                  >
                     <Col md={4}>
                       <Slider {...settings}>
                         <div>
@@ -266,7 +332,10 @@ const Shop = () => {
                       </Typography>
                     </Col>
                   </Row>
-                  <Row className="m-3 d-flex align-items-center border-top">
+                  <Row
+                    className="m-3 d-flex align-items-center border-top"
+                    style={{ animation: animations.fadeIn }}
+                  >
                     <Col md={4}>
                       <Slider {...settings}>
                         <div>
@@ -315,7 +384,10 @@ const Shop = () => {
                       </Typography>
                     </Col>
                   </Row>
-                  <Row className="m-3 d-flex align-items-center border-top">
+                  <Row
+                    className="m-3 d-flex align-items-center border-top"
+                    style={{ animation: animations.fadeIn }}
+                  >
                     <Col md={4}>
                       <Slider {...settings}>
                         <div>
@@ -364,7 +436,10 @@ const Shop = () => {
                       </Typography>
                     </Col>
                   </Row>
-                  <Row className="m-3 d-flex align-items-center border-top">
+                  <Row
+                    className="m-3 d-flex align-items-center border-top"
+                    style={{ animation: animations.fadeIn }}
+                  >
                     <Col md={4}>
                       <Slider {...settings}>
                         <div>
@@ -456,9 +531,16 @@ const Shop = () => {
                 >
                   $ 493
                 </Typography>
-                <Button variant="contained" color="primary" className="my-3 mx-1">Add To Wishlist</Button>
-                <Button variant="contained" color="info" className="my-3">Add To Cart</Button>
-
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="my-3 mx-1"
+                >
+                  Add To Wishlist
+                </Button>
+                <Button variant="contained" color="info" className="my-3">
+                  Add To Cart
+                </Button>
               </div>
             </Col>
           </Row>

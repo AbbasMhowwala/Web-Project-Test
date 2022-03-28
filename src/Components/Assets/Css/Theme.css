@@ -91,3 +91,22 @@ img.quick-img {
 .modal-dialog.quick-modal.modal-dialog-centered {
   max-width: 700px;
 }
+
+div#filter-toggle.col-md-3 {
+  display: block;
+}
+div#filter-toggle {
+  display: none;
+}
+.trans_product {
+  transition: all .3s ease;
+}
+a
+{
+  color: #000;
+  text-decoration: none;
+}
+a:hover
+{
+  color: #000 !important;
+}
