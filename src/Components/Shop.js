@@ -17,8 +17,8 @@ import Slider from "react-slick";
 import Helmet from "react-helmet";
 import WindowIcon from "@mui/icons-material/Window";
 import FormatListNumberedRtlIcon from "@mui/icons-material/FormatListNumberedRtl";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+// import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+// import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { Button } from "@mui/material";
 import { animations } from "react-animation";
 import { Link } from "react-router-dom";
@@ -36,7 +36,7 @@ const Shop = () => {
     setGrid(0);
   };
   const handleFilterView = (e) => {
-    if (e == 0) {
+    if (e === 0) {
       setFilter(1);
       document.getElementById("product-full").classList.remove("col-md-12");
       document.getElementById("product-full").classList.add("col-md-9");

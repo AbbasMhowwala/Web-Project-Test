@@ -29,7 +29,7 @@ h3.cat-heading.mb-3 {
 .shop-content.text-center.m-3 {
     display: none;
 }
-.slick-slide.slick-active.slick-center.slick-current {
+.bw-collection .slick-slide.slick-active.slick-center.slick-current {
     opacity: 1;
     cursor: pointer;
     box-shadow: 0 0 10px 0 #e9e9e9;
