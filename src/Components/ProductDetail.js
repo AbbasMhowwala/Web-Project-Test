@@ -3,7 +3,6 @@ import "./Assets/Css/Shop.css";
 import productimg from "../Components/Assets/Images/product/product.webp";
 import productimg2 from "../Components/Assets/Images/product/product2.jpg";
 import { Col, Container, Row } from "react-bootstrap";
-// import Slider from "react-slick";
 import {
   Button,
   FormControl,
@@ -13,37 +12,8 @@ import {
 } from "@mui/material";
 import Helmet from "react-helmet";
 import { Box } from "@mui/system";
-// import { MagnifierContainer } from "react-image-magnifiers";
-// import { MagnifierPreview } from "react-image-magnifiers";
-// import { MagnifierZoom } from "react-image-magnifiers";
 import SliderImage from "react-zoom-slider";
 const ProductDetail = () => {
-  // const [nav1, setNav1] = useState(null);
-  // const [nav2, setNav2] = useState(null);
-  // const [slider1, setSlider1] = useState(null);
-  // const [slider2, setSlider2] = useState(null);
-  // useEffect(() => {
-  //   setNav1(slider1);
-  //   setNav2(slider2);
-  // }, []);
-  // const settingsMain = {
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   asNavFor: ".slider-nav",
-  // };
-  // const settingsThumbs = {
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   asNavFor: ".slider-for",
-  //   dots: true,
-  //   centerMode: true,
-  //   swipeToSlide: true,
-  //   focusOnSelect: true,
-  //   centerPadding: "10px",
-  //   loop: false,
-  // };
   const slidesImages = [
     {
       id: 1,
@@ -94,53 +64,6 @@ const ProductDetail = () => {
                   showDescription={true}
                   direction="right"
                 />
-            {/* <Row>
-              <Col lg={3} className="d-flex justify-content-center flex-column"> */}
-                {/* <Slider
-                  {...settingsThumbs}
-                  asNavFor={nav1}
-                  ref={(slider) => setSlider2(slider)}
-                >
-                  {slidesImages.map((slide) => (
-                    <div className="slick-slide" key={slide.id}>
-                      <Image
-                        className="slick-slide-image"
-                        src={slide.image}
-                        alt="Thumb Images"
-                      />
-                    </div>
-                  ))}
-                </Slider> */}
-              {/* </Col> */}
-              {/* <Col lg={9} className="height-90"> */}
-                {/* <Slider
-                  {...settingsMain}
-                  asNavFor={nav2}
-                  ref={(slider) => setSlider1(slider)}
-                >
-               {slidesImages.map((slide) => (
-                   <MagnifierContainer className="magnific-popup">
-                    <div className="main-class-magnifier">
-                      <MagnifierPreview imageSrc={slide.image} />
-                    </div>
-                    <MagnifierZoom
-                      style={{ height: "500px" }}
-                      imageSrc={slide.image}
-                      className="preview-image"
-                    />
-                  </MagnifierContainer>  */}
-                
-                {/* <div className="slick-slide" key={slide.id}>
-                      <Image
-                        className="slick-slide-image main-slider"
-                        src={slide.image}
-                        alt="Main Image"
-                      />
-                    </div> 
-                ))}
-                </Slider>  */}
-              {/* </Col>
-            </Row> */}
           </Col>
           <Col lg={4} md={5} sm={12} xs={12}>
             <div className="detail-info">
