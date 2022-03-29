@@ -1,88 +1,160 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Assets/Css/Shop.css";
 import productimg from "../Components/Assets/Images/product/product.webp";
-import { Col, Container, Image, Row } from "react-bootstrap";
-import Slider from "react-slick";
-import { Button } from "@mui/material";
+import productimg2 from "../Components/Assets/Images/product/product2.jpg";
+import { Col, Container, Row } from "react-bootstrap";
+// import Slider from "react-slick";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
+import Helmet from "react-helmet";
+import { Box } from "@mui/system";
+// import { MagnifierContainer } from "react-image-magnifiers";
+// import { MagnifierPreview } from "react-image-magnifiers";
+// import { MagnifierZoom } from "react-image-magnifiers";
+import SliderImage from "react-zoom-slider";
 const ProductDetail = () => {
-  const [slider1, setSlider1] = useState(null);
-  const [slider2, setSlider2] = useState(null);
-  const [nav1, setNav1] = useState(null);
-  const [nav2, setNav2] = useState(null);
-  const settingsThumbs = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    swipeToSlide: true,
-    focusOnSelect: true,
-    centerPadding: '10px',
-    asNavFor: '.slider-for',
-    vertica: true
-  };
-  const settingsMain = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav'
-  };
-
+  // const [nav1, setNav1] = useState(null);
+  // const [nav2, setNav2] = useState(null);
+  // const [slider1, setSlider1] = useState(null);
+  // const [slider2, setSlider2] = useState(null);
+  // useEffect(() => {
+  //   setNav1(slider1);
+  //   setNav2(slider2);
+  // }, []);
+  // const settingsMain = {
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   fade: true,
+  //   asNavFor: ".slider-nav",
+  // };
+  // const settingsThumbs = {
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   asNavFor: ".slider-for",
+  //   dots: true,
+  //   centerMode: true,
+  //   swipeToSlide: true,
+  //   focusOnSelect: true,
+  //   centerPadding: "10px",
+  //   loop: false,
+  // };
   const slidesImages = [
     {
       id: 1,
-      image: productimg
+      image: productimg,
     },
     {
       id: 2,
-      image: productimg
-    }
+      image: productimg2,
+    },
+    {
+      id: 3,
+      image: productimg,
+    },
+    {
+      id: 4,
+      image: productimg,
+    },
   ];
-  useEffect(() => {
-    setNav1(slider1);
-    setNav2(slider2);
-  },[]);
+  const materials = [
+    "14k White Gold",
+    "18k White Gold",
+    "14k Yellow Gold",
+    "18k Yellow Gold",
+    "14k Rose Gold",
+    "18k Rose Gold",
+    "Platinum",
+  ];
+  const size = ["3", "4", "5", "6", "7", "8", "9", "10"];
 
   return (
     <div className="bw-product-detail">
-      <Container className="content-page-detail custom-fluid my-5" fluid>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Product List - Belgium Webnet- Making these Extraordinary Diamonds
+          Attainable
+        </title>
+        <meta
+          name="description"
+          content="Specializing in fancy color diamonds including; pink, yellow, blue, green, orange, purple, and white diamonds. Colored diamond jewelry. Offering a luxury experience to clients worldwide."
+        />
+      </Helmet>
+      <Container className="content-page-detail custom-fluid my-5">
         <Row className="align-items-center">
           <Col lg={5} md={7} sm={12} xs={12}>
-            <Row>
-              <Col lg={4} className="d-flex justify-content-center flex-column">
-              <Slider asNavFor={nav1} {...settingsThumbs} ref={slider => (setSlider2(slider))}>              
-                {slidesImages?.map((slide) =>
-                <div className="slick-slide" key={slide.id}>
-                  <img className="slick-slide-image" src={slide.image} />
-                </div>
-              )}
-            </Slider>
-                {/* <Image src={productimg} alt="Product Thumb" className="product-thumb"></Image>
-                <Image src={productimg} alt="Product Thumb" className="product-thumb"></Image>
-                <Image src={productimg} alt="Product Thumb" className="product-thumb"></Image>
-                <Image src={productimg} alt="Product Thumb" className="product-thumb"></Image> */}
-              </Col>
-              <Col lg={8}>
-                <Slider asNavFor={nav2} {...settingsMain} ref={slider => (setSlider1(slider))}>
-                {slidesImages?.map((slide) =>
-                <div className="slick-slide" key={slide.id}>
-                  <img className="slick-slide-image" src={slide.image} />
-                </div>
-              )}
-                </Slider>
-              </Col>
-            </Row>
+          <SliderImage
+                  data={slidesImages}
+                  showDescription={true}
+                  direction="right"
+                />
+            {/* <Row>
+              <Col lg={3} className="d-flex justify-content-center flex-column"> */}
+                {/* <Slider
+                  {...settingsThumbs}
+                  asNavFor={nav1}
+                  ref={(slider) => setSlider2(slider)}
+                >
+                  {slidesImages.map((slide) => (
+                    <div className="slick-slide" key={slide.id}>
+                      <Image
+                        className="slick-slide-image"
+                        src={slide.image}
+                        alt="Thumb Images"
+                      />
+                    </div>
+                  ))}
+                </Slider> */}
+              {/* </Col> */}
+              {/* <Col lg={9} className="height-90"> */}
+                {/* <Slider
+                  {...settingsMain}
+                  asNavFor={nav2}
+                  ref={(slider) => setSlider1(slider)}
+                >
+               {slidesImages.map((slide) => (
+                   <MagnifierContainer className="magnific-popup">
+                    <div className="main-class-magnifier">
+                      <MagnifierPreview imageSrc={slide.image} />
+                    </div>
+                    <MagnifierZoom
+                      style={{ height: "500px" }}
+                      imageSrc={slide.image}
+                      className="preview-image"
+                    />
+                  </MagnifierContainer>  */}
+                
+                {/* <div className="slick-slide" key={slide.id}>
+                      <Image
+                        className="slick-slide-image main-slider"
+                        src={slide.image}
+                        alt="Main Image"
+                      />
+                    </div> 
+                ))}
+                </Slider>  */}
+              {/* </Col>
+            </Row> */}
           </Col>
           <Col lg={4} md={5} sm={12} xs={12}>
             <div className="detail-info">
               <div className="pr-relative">
-                <h2 className="dproduct-title mb-3">14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set Engagement Ring</h2>
-                <small className="mb-3 d-block"><b>SKU: 84111</b></small>
+                <h2 className="dproduct-title mb-3">
+                  14K White 6x6 MM Square 1/8 CTW Diamond Semi-Set Engagement
+                  Ring
+                </h2>
+                <small className="mb-3 d-block">
+                  <b>SKU: 84111</b>
+                </small>
                 <div className="dproduct-price mb-5">
-                  <del className="enj-product-price-compare me-3">$290.00 USD</del>
-                  <ins className="enj-product-price engoj_price_main">
-                    $285.00 USD
+                  <ins className="enj-product-price engoj_price_main text-decoration-none">
+                    <b>$285.00 USD</b>
                   </ins>
                 </div>
                 <div className="pd_summary">
@@ -96,16 +168,62 @@ const ProductDetail = () => {
                     why...
                   </p>
                 </div>
+                <div className="select my-3">
+                  <Box sx={{ minWidth: 120 }}>
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Material
+                      </InputLabel>
+                      <Select
+                        labelId="demo-multiple-name-label"
+                        id="material-select"
+                      >
+                        {materials.map((name) => (
+                          <MenuItem key={name} value={name}>
+                            {name}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </Box>
+                  <Box sx={{ minWidth: 120 }} className="my-3">
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Ring Size
+                      </InputLabel>
+                      <Select
+                        labelId="demo-multiple-name-label"
+                        id="material-select"
+                      >
+                        {size.map((name) => (
+                          <MenuItem key={name} value={name}>
+                            {name}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </Box>
+                </div>
                 <div className="btn-addwhlist">
-                <Button variant="contained" className="box-shadow inline-block maxus-product__wishlist wish text-center">Wishlist</Button>
-                <Button variant="contained" className="box-shadow inline-block maxus-product__wishlist wish text-center mx-3">Add To Cart</Button>
+                  <Button
+                    variant="contained"
+                    className="box-shadow inline-block maxus-product__wishlist wish text-center"
+                  >
+                    Wishlist
+                  </Button>
+                  <Button
+                    variant="contained"
+                    className="box-shadow inline-block maxus-product__wishlist wish text-center mx-3"
+                  >
+                    Add To Cart
+                  </Button>
                 </div>
                 <ul className="product-meta-info">
                   <li>
                     <div className="item-product-meta-info product-category-info">
                       <label>Categories :</label>
-                      <a href="/collections/frontpage">Home page, </a>
-                      <a href="/collections/new">New </a>
+                      <a to="/">Engagement Ring, </a>
+                      <a to="/">Solitaire </a>
                     </div>
                   </li>
                 </ul>
