@@ -95,3 +95,20 @@ li.menu.links-menu a:hover
 {
   color: #000 !important;
 }
+li.menu.links-menu:hover .submenu
+{
+  display: block;
+}
+li.menu.links-menu {
+  position: relative;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 999;
+}

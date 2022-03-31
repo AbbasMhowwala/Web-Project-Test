@@ -59,11 +59,11 @@ const ProductDetail = () => {
       <Container className="content-page-detail custom-fluid my-5">
         <Row className="align-items-center">
           <Col lg={5} md={7} sm={12} xs={12}>
-          <SliderImage
-                  data={slidesImages}
-                  showDescription={true}
-                  direction="right"
-                />
+            <SliderImage
+              data={slidesImages}
+              showDescription={true}
+              direction="right"
+            />
           </Col>
           <Col lg={4} md={5} sm={12} xs={12}>
             <div className="detail-info">
