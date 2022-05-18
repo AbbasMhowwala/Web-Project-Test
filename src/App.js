@@ -1,3 +1,4 @@
+import React  from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "./Components/Templates/Menu";
 import Home from "./Components/Home";

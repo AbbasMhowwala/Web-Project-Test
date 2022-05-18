@@ -88,7 +88,7 @@ const Menu = () => {
               <Image src={logo} alt="Logo" fluid></Image>
             </Nav.Link>
           </div>
-          {options?.map((e) => (
+          {options.map((e) => (
             <Button variant="primary" onClick={() => handleShow(e.name)}>
               {e.name}
             </Button>
